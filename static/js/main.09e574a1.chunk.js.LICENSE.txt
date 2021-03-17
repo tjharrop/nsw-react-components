@@ -1,0 +1,1 @@
+/*! [replace-name] v[replace-version] */
