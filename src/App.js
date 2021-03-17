@@ -4,6 +4,8 @@ import Accordion from './components/accordion';
 import NSWbutton from './components/button';
 import NSWnotification from './components/notification';
 import TagList, {Tag} from './components/tags';
+import Callout from './components/callout';
+import Card, { CardContent, CardHeader, CardCopy, CardTag, CardDate } from './components/card';
 import 'nsw-design-system/src/main.scss'
 
 function App() {
@@ -44,6 +46,60 @@ function App() {
             text: 'baz',
           },
         ]} />
+
+        <h2 class="section-title">Callout</h2>
+        <Callout title="Title of callout">
+            <p>Description of callout</p>
+        </Callout>
+
+        <h2 class="section-title">Cards</h2>
+        <div class='nsw-grid'>
+          <div class='nsw-col nsw-col-md-4'>
+            <Card
+              date='2021-03-17'
+              tag='Environment'
+              link='#'
+              headline='Card Title'
+              image='https://picsum.photos/id/292/400/200'
+              imageAlt='alt text'>
+                <CardCopy>Some text</CardCopy>
+            </Card>
+          </div>
+        </div>
+        <div class='nsw-grid'>
+          <div class='nsw-col nsw-col-md-4'>
+            <Card content
+              date='2021-03-17'
+              tag='Environment'
+              link='#'
+              headline='Card Title'
+              image='https://picsum.photos/id/292/400/200'
+              imageAlt='alt text'>
+                <CardCopy>Some text</CardCopy>
+            </Card>
+          </div>
+        </div>
+        <div class='nsw-grid'>
+          <div class='nsw-col nsw-col-md-4'>
+            <Card content
+              link='#'
+              headline='Card Title'>
+                <CardCopy>Some text</CardCopy>
+            </Card>
+          </div>
+        </div>
+        <div class='nsw-grid'>
+          <div class='nsw-col nsw-col-md-4'>
+            <Card
+              link='#'
+              headline='Card Title'>
+                <CardCopy>Some text</CardCopy>
+            </Card>
+          </div>
+        </div>
+
+
+
       </div>
     </div>
   );
