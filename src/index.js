@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
+import "@fontsource/montserrat"
 import 'nsw-design-system/dist/css/main.css'
 import reportWebVitals from './reportWebVitals';
 
