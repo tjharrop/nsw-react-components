@@ -5,6 +5,9 @@ import NSWbutton from './components/button';
 import NSWnotification from './components/notification';
 import TagList, {Tag} from './components/tags';
 import Callout from './components/callout';
+import InpageNavLinks from './components/in-page-navigation';
+import Breadcrumbs from './components/breadcrumbs';
+import LinkList from './components/link-list';
 import Card, { CardContent, CardHeader, CardCopy, CardTag, CardDate } from './components/card';
 import 'nsw-design-system/src/main.scss'
 
@@ -98,6 +101,49 @@ function App() {
           </div>
         </div>
 
+        <h2 class="section-title">In-page nav</h2>
+        <InpageNavLinks sections={[
+          {
+            link: 'section1',
+            title: 'Section 1',
+          },
+          {
+            link: 'section2',
+            title: 'Section 2',
+          },
+        ]} />
+
+        <h2 class="section-title">Breadcrumbs</h2>
+        <Breadcrumbs label="Breadcrumb for this page"
+          items={[
+            {
+              link: '#',
+              text: 'Home',
+            },
+            {
+              link: '#',
+              text: 'Parent',
+            },
+            {
+              text: 'Current page',
+            },
+          ]}
+        />
+
+
+        <h2 class="section-title">Link list</h2>
+        <LinkList
+          items={[
+            {
+              link: '#',
+              text: 'Home',
+            },
+            {
+              link: '#',
+              text: 'Parent',
+            },
+          ]}
+        />
 
 
       </div>
