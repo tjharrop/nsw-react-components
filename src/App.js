@@ -9,7 +9,9 @@ import InpageNavLinks from './components/in-page-navigation';
 import Breadcrumbs from './components/breadcrumbs';
 import LinkList from './components/link-list';
 import Card, { CardContent, CardHeader, CardCopy, CardTag, CardDate } from './components/card';
+import * as Form from  './components/forms';
 import 'nsw-design-system/src/main.scss'
+import nextId from "react-id-generator";
 
 function App() {
   return (
@@ -144,6 +146,88 @@ function App() {
             },
           ]}
         />
+
+
+        <h2 class="section-title">Text form groups</h2>
+        <Form.FormGroupText
+          label="Your name"
+          helper="as it is written on your drivers' licence"
+          errorText="Please enter your name"
+          htmlId={nextId()}
+        />
+        <Form.FormGroupText
+          label="Enter some long text"
+          errorText="the error"
+          as="textarea"
+          htmlId={nextId()}
+        />
+
+        <h2 class="section-title">Select form group</h2>
+        <Form.FormGroupSelect
+          label="Select a thing"
+          helper="But only one thing"
+          errorText="Please select a thing"
+          htmlId={nextId()}
+          options={[
+            {
+              value: '',
+              text: 'Please select',
+            },
+            {
+              value: '1',
+              text: 'Option 1',
+            },
+            {
+              value: '2',
+              text: 'Option 2',
+              selected: 'selected'
+            },
+            {
+              value: '3',
+              text: 'Option 3',
+            },
+          ]}        />
+
+        <h2 class="section-title">Error form group</h2>
+        <Form.FormGroupText
+          label="Your name"
+          helper="as it is written on your drivers' licence"
+          errorText="Please enter your name"
+          htmlId={nextId()}
+          status="invalid"
+        />
+        <Form.FormGroupText
+          label="Enter some long text"
+          errorText="the error"
+          as="textarea"
+          htmlId={nextId()}
+          status="invalid"
+        />
+        <Form.FormGroupSelect
+          label="Select a thing"
+          helper="But only one thing"
+          errorText="Please select a thing"
+          htmlId={nextId()}
+          status="invalid"
+          options={[
+            {
+              value: '',
+              text: 'Please select',
+            },
+            {
+              value: '1',
+              text: 'Option 1',
+            },
+            {
+              value: '2',
+              text: 'Option 2',
+              selected: 'selected'
+            },
+            {
+              value: '3',
+              text: 'Option 3',
+            },
+          ]}        />
 
 
       </div>
